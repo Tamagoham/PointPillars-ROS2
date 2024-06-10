@@ -7,7 +7,7 @@
 #include "params.h"
 #include "pointpillar.h"
 
-std::string Model_File = "/home/e404/perception_ws/src/cuda_pointpillars_ros/model/pointpillar.onnx";
+std::string Model_File = "/home/ynait0/ws/pointpillars-ros2/src/cuda_pointpillars_ros/model/pointpillar.onnx";
 
 void Getinfo(void)
 {

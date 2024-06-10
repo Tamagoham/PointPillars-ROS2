@@ -9,7 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(autoware_auto_perception_msgs REQUIRED)
+#find_package(autoware_auto_perception_msgs REQUIRED)
 find_package(CUDA REQUIRED)
 
 set(CMAKE_C_COMPILER /usr/bin/gcc)
@@ -87,7 +87,8 @@ include_directories(
 target_compile_features(pc_process PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
 # ament_target_dependencies(pc_info    rclcpp sensor_msgs autoware_auto_perception_msgs)
-ament_target_dependencies(pc_process rclcpp sensor_msgs autoware_auto_perception_msgs CUDA
+#ament_target_dependencies(pc_process rclcpp sensor_msgs autoware_auto_perception_msgs CUDA
+ament_target_dependencies(pc_process rclcpp sensor_msgs CUDA
 )
 # ament_target_dependencies(cuda_pp_ros 
 #   sensor_msgs 
