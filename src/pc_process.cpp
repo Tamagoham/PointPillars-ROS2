@@ -25,7 +25,7 @@ private:
 public:
   MsgExchangeClass():Node("pc_process")
   {
-    sub_ = this->create_subscription<PointCloud2>("rslidar_points", 10, std::bind(&MsgExchangeClass::callback, this, std::placeholders::_1));
+    sub_ = this->create_subscription<PointCloud2>("/livox/lidar", 10, std::bind(&MsgExchangeClass::callback, this, std::placeholders::_1));
     // pub_ = this->create_publisher<autoware_auto_perception_msgs::msg::PredictedObjects>("objects", 10);
   }
 };
